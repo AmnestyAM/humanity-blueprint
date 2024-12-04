@@ -37,22 +37,12 @@
       "step": "enableMultisite"
     },
     {
-      "step": "mkdir",
-      "path": "/tmp/humanity-theme"
-    },
-    {
-      "step": "unzip",
-      "extractToPath": "/tmp/humanity-theme",
-      "zipFile": {
-        "resource": "url",
-        "url": "https://github-proxy.com/proxy/?repo=AmnestyAM/humanity-theme/releases/download/playground/humanity-theme-playground.zip"
-      }
-    },
-    {
-      "step": "mv",
-      "fromPath": "/tmp/humanity-theme",
-      "toPath": "/wordpress/wp-content/themes/humanity-theme"
-    },
+      "step": "installTheme",
+        "themeData": {
+           "resource": "url",
+           "url": "https://github.com/amnestywebsite/humanity-theme/releases/download/v2.0.8/humanity-theme.zip"
+            }
+        },   
     {
       "step": "wp-cli",
       "command": "wp theme enable humanity-theme --network"
