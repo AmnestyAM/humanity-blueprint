@@ -40,7 +40,7 @@
       "step": "installTheme",
         "themeData": {
            "resource": "url",
-           "url": "https://github.com/amnestywebsite/humanity-theme/releases/download/v2.0.8/humanity-theme.zip"
+           "url": "https://github-proxy.com/proxy/?repo=amnestywebsite/humanity-theme&release=v1.1.1&asset=humanity-theme.zip"
             }
         },   
     {
