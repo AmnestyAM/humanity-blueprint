@@ -45,7 +45,7 @@
       "extractToPath": "/tmp/humanity-theme",
       "zipFile": {
         "resource": "url",
-        "url": "https://github-proxy.com/proxy/?repo=amnestywebsite/humanity-theme&release=v1.1.1&asset=humanity-theme.zip"
+        "url": "https://github-proxy.com/proxy/?repo=AmnestyAM/humanity-theme/releases/download/playground/humanity-theme-playground.zip"
       }
     },
     {
@@ -62,11 +62,14 @@
       "command": "wp theme activate humanity-theme"
     },
     {
-      "step": "installPlugin",
-      "pluginZipFile": {
-        "resource": "wordpress.org/plugins",
-        "slug": "cmb2"
-      }
+        "step": "installPlugin",
+        "pluginData": {
+            "resource": "wordpress.org/plugins",
+            "slug": "cmb2"
+        },
+        "options": {
+            "activate": true
+        }
     },
     {
       "step": "updateUserMeta",
