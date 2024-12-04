@@ -17,7 +17,7 @@ Whats in the blue print - Nothing yet
 | CMB2 Dependancy extensions | no |   |
 
 
-[Load our theme in your browser](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/amnestywebsite/humanity-blueprint/main/blueprint.json)
+[Load AMs changes to our theme in your browser](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/amnestyam/humanity-blueprint/main/blueprint.json)
 
 
 https://wordpress.org/playground/   
