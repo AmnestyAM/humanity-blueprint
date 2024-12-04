@@ -62,16 +62,6 @@
       "command": "wp theme activate humanity-theme"
     },
     {
-        "step": "installPlugin",
-        "pluginData": {
-            "resource": "wordpress.org/plugins",
-            "slug": "cmb2"
-        },
-        "options": {
-            "activate": true
-        }
-    },
-    {
       "step": "updateUserMeta",
       "meta": {
         "admin_color": "sunrise"
