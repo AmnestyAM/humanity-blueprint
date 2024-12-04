@@ -1,18 +1,18 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "The Amnesty Humanity WordPress thme Playground",
-    "description": "A demo enviroment for our Humanity theme",
+    "title": "The Amnesty Humanity WordPress theme Playground",
+    "description": "A demo environment for our Humanity theme",
     "author": "Humanity",
     "categories": [
       "theme",
       "demo"
     ]
   },
-  "landingPage": "/wp-admin/themes.php",
+  "landingPage": "/wp-admin/network/themes.php",
   "preferredVersions": {
     "php": "8.2",
-    "wp": "6.6"
+    "wp": "6.4"
   },
   "features": {
     "networking": true
@@ -21,9 +21,11 @@
     "kitchen-sink"
   ],
   "siteOptions": {
-    "blogname": "Humanity Theme"
+    "blogname": "Humanity Theme",
+    "blogdescription": "Free and open source WordPRess theme for humanity",
+    "show_on_front": "page",
+    "page_on_front": "2"
   },
-  "login": true,
   "steps": [
     {
       "step": "login",
@@ -31,11 +33,37 @@
       "password": "password"
     },
     {
+      "step": "enableMultisite"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp config set WP_DEBUG true --raw"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp config set WP_DEBUG_LOG true --raw"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp config set WP_DEBUG_DISPLAY false --raw"
+    },
+    {
       "step": "installTheme",
       "themeData": {
         "resource": "url",
-        "url": "https://github-proxy.com/proxy/?repo=AmnestyAM/humanity-theme&release=playground"
+        "url": "https://github-proxy.com/proxy/?repo=AmnestyAM/humanity-theme&release=playground&asset=humanity-theme.zip"
+      },
+      "options": {
+        "activate": true
       }
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp theme activate humanity-theme"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp post generate --count=12 --post_type=post --post_date=1999-01-04"
     }
   ]
 }
