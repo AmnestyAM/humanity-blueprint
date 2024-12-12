@@ -12,7 +12,7 @@
   "landingPage": "/wp-admin/network/themes.php",
   "preferredVersions": {
     "php": "8.2",
-    "wp": "6.4"
+    "wp": "6.6"
   },
   "features": {
     "networking": true
@@ -22,7 +22,7 @@
   ],
   "siteOptions": {
     "blogname": "Humanity Theme",
-    "blogdescription": "Free and open source WordPRess theme for humanity",
+    "blogdescription": "Free and open source WordPress theme for humanity",
     "show_on_front": "page",
     "page_on_front": "2"
   },
@@ -48,14 +48,8 @@
       "command": "wp config set WP_DEBUG_DISPLAY false --raw"
     },
     {
-      "step": "installTheme",
-      "themeData": {
-        "resource": "url",
-        "url": "https://github-proxy.com/proxy/?repo=AmnestyAM/humanity-theme&release=playground&asset=humanity-theme.zip"
-      },
-      "options": {
-        "activate": true
-      }
+      "step": "wp-cli",
+      "command": "wp theme install 'https://github-proxy.com/proxy/?repo=AmnestyAM/humanity-theme&release=playground&asset=humanity-theme.zip'"
     },
     {
       "step": "wp-cli",
